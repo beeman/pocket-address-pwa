@@ -1,0 +1,13 @@
+{
+  "fallbackType": "webview",
+  "generatorApp": "solana-mobile",
+  "host": "beeman.github.io",
+  "launcherName": "Pocket Address",
+  "name": "Pocket Address",
+  "packageId": "io.github.beeman.pocketaddresspwa",
+  "startUrl": "/pocket-address-pwa/",
+  "signingKey": {
+    "alias": "pocket-address-pwa",
+    "path": "release.keystore"
+  }
+}

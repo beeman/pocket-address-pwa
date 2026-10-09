@@ -20,20 +20,22 @@ GitHub Pages at https://beeman.github.io/pocket-address-pwa/ serves the app, the
 
 ## Web shell
 
-The Android app is a WebView shell generated next to this repo with the Solana Mobile CLI. The web app skips Mobile Wallet Adapter registration when the user agent contains `Solana Mobile Web Shell`, so only Seeker Connect is offered inside it.
+`shell/` is the Android WebView app for the Solana dApp Store, generated with `npx solana-mobile@latest webshell init` and committed as is. It opens the Pages URL. The web app skips Mobile Wallet Adapter registration when the user agent contains `Solana Mobile Web Shell`, so only Seeker Connect is offered inside it.
 
 ```bash
-export SOLANA_MOBILE_KEYSTORE_PASSWORD=… SOLANA_MOBILE_KEY_PASSWORD=…
-npx solana-mobile@latest webshell init pocket-address-pwa-shell \
-  --url http://localhost:5173/ --manifest pocket-address-pwa/public/manifest.webmanifest \
-  --app-name "Pocket Address" --application-id io.github.beeman.pocketaddresspwa \
-  --version-code 1 --version-name 1.0.0 --keystore-alias pocket-address-pwa --keystore-path release.keystore
-npx solana-mobile@latest webshell build pocket-address-pwa-shell
-adb reverse tcp:5173 tcp:5173
-adb install -r pocket-address-pwa-shell/app/build/outputs/apk/release/app-release.apk
+source ~/dev/solana-mobile/agents/keys/webshell.env   # exports SOLANA_MOBILE_KEYSTORE_PASSWORD and SOLANA_MOBILE_KEY_PASSWORD
+npx solana-mobile@latest webshell build shell
+adb install -r shell/app/build/outputs/apk/release/app-release.apk
 ```
 
-For a store release, point `SOLANA_MOBILE_URL` in the shell's `gradle.properties` at the Pages URL and raise `SOLANA_MOBILE_VERSION_CODE`. Every update must be signed with the same keystore.
+To test against the dev server instead, build with the URL overridden and reverse the port:
+
+```bash
+(cd shell && ./gradlew assembleRelease -PSOLANA_MOBILE_URL=http://localhost:5173/ -PSOLANA_MOBILE_KEYSTORE_PATH="$PWD/release.keystore" -PSOLANA_MOBILE_KEYSTORE_ALIAS=pocket-address-pwa)
+adb reverse tcp:5173 tcp:5173
+```
+
+Without the keystore properties Gradle silently writes `app-release-unsigned.apk` instead. `shell/release.keystore` is gitignored. Every update must be signed with the same key, so keep a backup outside the repo. Raise `SOLANA_MOBILE_VERSION_CODE` in `shell/gradle.properties` for every store release.
 
 ## Branding
 
