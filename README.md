@@ -37,6 +37,14 @@ adb reverse tcp:5173 tcp:5173
 
 Without the keystore properties Gradle silently writes `app-release-unsigned.apk` instead. `shell/release.keystore` is gitignored. Every update must be signed with the same key, so keep a backup outside the repo. Raise `SOLANA_MOBILE_VERSION_CODE` in `shell/gradle.properties` for every store release.
 
+### CI builds
+
+The `Android APK` workflow (`.github/workflows/android-apk.yml`, manual dispatch) builds the same signed APK on GitHub and uploads it to a daily `android-dev-YYYY-MM-DD` prerelease. It uses the run number as `versionCode`, so every CI build installs over the previous one. It needs three repository secrets: `SOLANA_MOBILE_KEYSTORE_BASE64` (the keystore, base64 without line breaks), `SOLANA_MOBILE_KEYSTORE_PASSWORD` and `SOLANA_MOBILE_KEY_PASSWORD`.
+
+```bash
+gh workflow run android-apk.yml
+```
+
 ## Branding
 
 The SVG sources and their PNG exports live in `assets/branding/`. Re-export them with `assets/branding/export.sh` (needs `rsvg-convert`, `brew install librsvg`). `public/icon-512.png` is the store icon and `public/favicon.svg` the app icon.
