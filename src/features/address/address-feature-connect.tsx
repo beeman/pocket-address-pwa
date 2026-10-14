@@ -31,7 +31,9 @@ export function AddressFeatureConnect() {
         Connect wallet
       </Button>
       {/* The space is reserved so the layout does not jump when the line appears. */}
-      <p className="text-muted-foreground text-sm">{connect.error && !isWalletCancel(connect.error) ? 'Could not connect. Please try again.' : ' '}</p>
+      <p className="text-muted-foreground text-sm">
+        {connect.error && !isWalletCancel(connect.error) ? 'Could not connect. Please try again.' : ' '}
+      </p>
       {isWebShell() ? (
         <p className="text-accent rounded-full border border-current px-3 py-1 text-xs font-medium">
           Running inside a Solana Mobile web shell
