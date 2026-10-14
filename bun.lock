@@ -6,9 +6,7 @@
       "name": "pocket-address-pwa",
       "dependencies": {
         "@radix-ui/react-slot": "^1.3.3",
-        "@solana-mobile/seeker-connect-ui": "^0.1.0",
-        "@solana-mobile/seeker-connect-wallet-standard": "^0.1.0",
-        "@solana-mobile/wallet-standard-mobile": "0.0.0-canary-20260828231154",
+        "@solana-mobile/wallet-standard-mobile": "0.7.0",
         "@solana/kit": "^8.0.0",
         "@solana/kit-plugin-wallet": "^0.18.0",
         "@solana/react": "^8.0.0",
@@ -116,10 +114,6 @@
 
     "@keyv/serialize": ["@keyv/serialize@1.1.1", "", {}, "sha512-dXn3FZhPv0US+7dtJsIi2R+c7qWYiReoEh5zUntWCf4oSpMNib8FDhSoed6m3QyZdx5hK7iLFkYk3rNxwt8vTA=="],
 
-    "@lit-labs/ssr-dom-shim": ["@lit-labs/ssr-dom-shim@1.6.0", "", {}, "sha512-VHb0ALPMTlgKjM6yIxxoQNnpKyUKLD04VzeQdsiXkMqkvYlAHxq9glGLmgbb889/1GsohSOAjvQYoiBppXFqrQ=="],
-
-    "@lit/reactive-element": ["@lit/reactive-element@2.1.2", "", { "dependencies": { "@lit-labs/ssr-dom-shim": "^1.5.0" } }, "sha512-pbCDiVMnne1lYUIaYNN5wrwQXDtHaYtg7YEFPeW+hws6U47WeFvISGUWekPGKWOP1ygrs0ef0o1VJMk1exos5A=="],
-
     "@noble/curves": ["@noble/curves@2.4.0", "", { "dependencies": { "@noble/hashes": "2.4.0" } }, "sha512-P4/62zrgfH33CneE3Dn4WhJVA22YUU0eR51wKIan4NVRvwsA0YnPTwWGpNbpuacSujmSFLvyzpyuR30+fbq2Ew=="],
 
     "@noble/hashes": ["@noble/hashes@2.4.0", "", {}, "sha512-X5XaVWZIBCT7HHZGm5I7ZQXDwLG+bGXuSrMQAW+7Zvl87h1kmc1ZB1VSRJcpUfoUrGQp4Fkoxm5kZ+Ms+aW+eA=="],
@@ -162,17 +156,9 @@
 
     "@rolldown/pluginutils": ["@rolldown/pluginutils@1.0.1", "", {}, "sha512-2j9bGt5Jh8hj+vPtgzPtl72j0yRxHAyumoo6TNfAjsLB04UtpSvPbPcDcBMxz7n+9CYB0c1GxQFxYRg2jimqGw=="],
 
-    "@solana-mobile/mobile-wallet-adapter-protocol": ["@solana-mobile/mobile-wallet-adapter-protocol@0.0.0-canary-20260910202749", "", { "dependencies": { "@noble/curves": "^2.2.0", "@noble/hashes": "^2.2.0", "@solana/kit": "^7.0.0 || ^8.0.0", "@solana/wallet-standard-features": "^1.3.0", "@solana/wallet-standard-util": "^1.1.2", "@wallet-standard/core": "^1.1.1" }, "peerDependencies": { "react-native": ">0.74" }, "optionalPeers": ["react-native"] }, "sha512-94IPuD9Uh1oJ4IifikFbtdkCSmFYXMshMQOOMpssl3koMuUSKXg58//xV8+IxcMK35oesLtw6JekheScR+rw7A=="],
+    "@solana-mobile/mobile-wallet-adapter-protocol": ["@solana-mobile/mobile-wallet-adapter-protocol@3.0.1", "", { "dependencies": { "@noble/curves": "^2.4.0", "@noble/hashes": "^2.2.0", "@solana/kit": "^8.4.0", "@solana/wallet-standard-features": "^1.5.0", "@solana/wallet-standard-util": "^1.1.4", "@wallet-standard/core": "^1.1.2" }, "peerDependencies": { "react-native": ">0.74" }, "optionalPeers": ["react-native"] }, "sha512-qqIzi2xqs7rE0JBVtA3u2aq10ka/Vb4wNULUc5C589jHHg/YqW/ak8Y3V5MetOYOTMO1byJRLA554xHrLRKtEg=="],
 
-    "@solana-mobile/seeker-connect-core": ["@solana-mobile/seeker-connect-core@0.1.2", "", {}, "sha512-87SC8Ly4cQwKvmVBQXyOXtTIwSivwAxvGlFNvZWmua6a+94la4b96o/IckL/P/nUcwyAJT8hmyjwnVFUJdFpbA=="],
-
-    "@solana-mobile/seeker-connect-ui": ["@solana-mobile/seeker-connect-ui@0.1.2", "", { "dependencies": { "@solana-mobile/seeker-connect-core": "0.1.2", "lit": "^3.3.2" } }, "sha512-hfjAL1N/B5Bbbfnqe5e57q7/jSeOpMqy02Xp8bjugW9JKTzYcMh/3tdgW+lD+N/SSTb704ODA1RPpZyvSncbBA=="],
-
-    "@solana-mobile/seeker-connect-wallet-standard": ["@solana-mobile/seeker-connect-wallet-standard@0.1.2", "", { "dependencies": { "@solana-mobile/seeker-connect-core": "0.1.2", "@solana-mobile/seeker-connect-ui": "0.1.2", "@solana-mobile/seeker-connect-web": "0.1.2", "@solana/wallet-standard-features": "^1.4.0", "@wallet-standard/base": "^1.1.1", "@wallet-standard/features": "^1.1.1", "@wallet-standard/wallet": "^1.1.1" } }, "sha512-RonTn7nllZ9GF+qP2YwT5VojAtJ3w+1OpmT2+LEpzMpDLqtKKSxFK1M78pVZmcTqYyLxqtBBVdTnp5b0xSQBHA=="],
-
-    "@solana-mobile/seeker-connect-web": ["@solana-mobile/seeker-connect-web@0.1.2", "", { "dependencies": { "@solana-mobile/mobile-wallet-adapter-protocol": "^3.0.0", "@solana-mobile/seeker-connect-core": "0.1.2" } }, "sha512-6vXv6P4vLSa+oZMj+AP2Nbj/6SQLOK9mn1/h6ZLlou4dKp+Aoe90g4VwKy4hyPgNyGtrsNQlzVyyUQp4A6hmlg=="],
-
-    "@solana-mobile/wallet-standard-mobile": ["@solana-mobile/wallet-standard-mobile@0.0.0-canary-20260828231154", "", { "dependencies": { "@solana-mobile/mobile-wallet-adapter-protocol": "^0.0.0-canary-20260828231154", "@solana/wallet-standard-chains": "^1.1.1", "@solana/wallet-standard-features": "^1.3.0", "@wallet-standard/base": "^1.0.1", "@wallet-standard/features": "^1.0.3", "@wallet-standard/wallet": "^1.1.0", "qrcode": "^1.5.4", "tslib": "^2.8.1" }, "peerDependencies": { "@react-native-async-storage/async-storage": "^1.17.7 || ^2.0.0" }, "optionalPeers": ["@react-native-async-storage/async-storage"] }, "sha512-tJgxlFBfb4mft3cmjcQCYKeDCG6fgVIkhKft09tjf2BIQbvBVhetrBxBWew2fmWgimw817Qd3fn4Uki+06NZGg=="],
+    "@solana-mobile/wallet-standard-mobile": ["@solana-mobile/wallet-standard-mobile@0.7.0", "", { "dependencies": { "@solana-mobile/mobile-wallet-adapter-protocol": "^3.0.0", "@solana/wallet-standard-chains": "^1.1.1", "@solana/wallet-standard-features": "^1.5.0", "@wallet-standard/base": "^1.0.1", "@wallet-standard/features": "^1.0.3", "@wallet-standard/wallet": "^1.1.0", "qrcode": "^1.5.4", "tslib": "^2.8.1" }, "peerDependencies": { "@react-native-async-storage/async-storage": "^1.17.7 || ^2.0.0" }, "optionalPeers": ["@react-native-async-storage/async-storage"] }, "sha512-606MaDKOvl7OBbCfRw9Gnaph/CkTttaX5tb0Gsl43rLgsW0Znld1u+d+g07hNOqOPAOVbosqUlk5aI9/J+X0xg=="],
 
     "@solana/accounts": ["@solana/accounts@8.4.0", "", { "dependencies": { "@solana/addresses": "8.4.0", "@solana/codecs-core": "8.4.0", "@solana/codecs-strings": "8.4.0", "@solana/errors": "8.4.0", "@solana/rpc-spec": "8.4.0", "@solana/rpc-types": "8.4.0" }, "peerDependencies": { "typescript": ">=5.4.0" }, "optionalPeers": ["typescript"] }, "sha512-YklERWeG5UD2fzxR0zwWgzCVyuHRqg6eTIyGBAe8hOWIim8TYS1aPBVFAlVkSZiAXaFRxmu1E3IRfeCe/QSQmg=="],
 
@@ -313,8 +299,6 @@
     "@types/react": ["@types/react@19.3.0", "", { "dependencies": { "csstype": "^3.2.2" } }, "sha512-N0rFCuH9YoxG9/m61l9MfpJKfmLOVU0em7ipIz6TRgSSkvReLB9vL85GB+yr8Bs5leqpvg96JSwF4ZS1s4viQg=="],
 
     "@types/react-dom": ["@types/react-dom@19.3.0", "", { "peerDependencies": { "@types/react": "^19.3.0" } }, "sha512-ZI7bU42mZXXKHn/qNLEw2IrbiINU7X5+vfgdixBHkCNpYWXjKgfQ/P+uyGb5CjOLB9UcnTeg3rylQtV2hym44Q=="],
-
-    "@types/trusted-types": ["@types/trusted-types@2.0.7", "", {}, "sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw=="],
 
     "@typescript-eslint/eslint-plugin": ["@typescript-eslint/eslint-plugin@8.71.1", "", { "dependencies": { "@eslint-community/regexpp": "^4.12.2", "@typescript-eslint/scope-manager": "8.71.1", "@typescript-eslint/type-utils": "8.71.1", "@typescript-eslint/utils": "8.71.1", "@typescript-eslint/visitor-keys": "8.71.1", "ignore": "^7.0.5", "natural-compare": "^1.4.0", "ts-api-utils": "^2.5.0" }, "peerDependencies": { "@typescript-eslint/parser": "^8.71.1", "eslint": "^8.57.0 || ^9.0.0 || ^10.0.0", "typescript": ">=4.8.4 <6.1.0" } }, "sha512-nNlBf6HuotqMgZvSkWD5hNdemiBIxQ2NmrlgfcUIeZRs+BbakjscCQRq/Hb74EFVnFiSWWdL12JruqwBy3ERDw=="],
 
@@ -538,12 +522,6 @@
 
     "lightningcss-win32-x64-msvc": ["lightningcss-win32-x64-msvc@1.33.0", "", { "os": "win32", "cpu": "x64" }, "sha512-OlEICDx/Xl0FqSp4bry8zFnCvGpig3Gl4gCquvYwHuqJKEC1+n9NgDniFvqHGmMv1ZkqDJrDqKKSykTDX+ehuA=="],
 
-    "lit": ["lit@3.3.3", "", { "dependencies": { "@lit/reactive-element": "^2.1.0", "lit-element": "^4.2.0", "lit-html": "^3.3.0" } }, "sha512-fycuvZg/hkpozL00lm1pEJH5nN/lr9ZXd6mJI2HSN4+Bzc+LDNdEApJ6HFbPkdFNHLvOplIIuJvxkS4XUxqirw=="],
-
-    "lit-element": ["lit-element@4.2.2", "", { "dependencies": { "@lit-labs/ssr-dom-shim": "^1.5.0", "@lit/reactive-element": "^2.1.0", "lit-html": "^3.3.0" } }, "sha512-aFKhNToWxoyhkNDmWZwEva2SlQia+jfG0fjIWV//YeTaWrVnOxD89dPKfigCUspXFmjzOEUQpOkejH5Ly6sG0w=="],
-
-    "lit-html": ["lit-html@3.3.3", "", { "dependencies": { "@types/trusted-types": "^2.0.2" } }, "sha512-el8M6jK2o3RXBnrSHX3ZKrsN8zEV63pSExTO1wYJz7QndGYZ8353e2a5PPX+qHe2aGayfnchQmkAojaWAREOIA=="],
-
     "locate-path": ["locate-path@6.0.0", "", { "dependencies": { "p-locate": "^5.0.0" } }, "sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw=="],
 
     "lru-cache": ["lru-cache@5.1.1", "", { "dependencies": { "yallist": "^3.0.2" } }, "sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w=="],
@@ -671,8 +649,6 @@
     "zod-validation-error": ["zod-validation-error@4.0.2", "", { "peerDependencies": { "zod": "^3.25.0 || ^4.0.0" } }, "sha512-Q6/nZLe6jxuU80qb/4uJ4t5v2VEZ44lzQjPDhYJNztRQ4wyWc6VF3D3Kb/fAuPetZQnhS3hnajCf9CsWesghLQ=="],
 
     "@eslint-community/eslint-utils/eslint-visitor-keys": ["eslint-visitor-keys@3.4.3", "", {}, "sha512-wpc+LXeiyiisxPlEkUzU6svyS1frIO3Mgxj1fdy7Pm8Ygzguax2N3Fa/D/ag1WqbOprdI+uY6wMUl8/a2G+iag=="],
-
-    "@solana-mobile/seeker-connect-web/@solana-mobile/mobile-wallet-adapter-protocol": ["@solana-mobile/mobile-wallet-adapter-protocol@3.0.1", "", { "dependencies": { "@noble/curves": "^2.4.0", "@noble/hashes": "^2.2.0", "@solana/kit": "^8.4.0", "@solana/wallet-standard-features": "^1.5.0", "@solana/wallet-standard-util": "^1.1.4", "@wallet-standard/core": "^1.1.2" }, "peerDependencies": { "react-native": ">0.74" }, "optionalPeers": ["react-native"] }, "sha512-qqIzi2xqs7rE0JBVtA3u2aq10ka/Vb4wNULUc5C589jHHg/YqW/ak8Y3V5MetOYOTMO1byJRLA554xHrLRKtEg=="],
 
     "@solana/rpc-transport-http/undici-types": ["undici-types@8.11.2", "", {}, "sha512-iMVNmWZ0leK/goS6eXMizSzmm9CDWtyphwbaCms3DNLqRxDL+mMoNVcZMTyyVgXP0N+Z8neAMzDoUOUJL8veKg=="],
 

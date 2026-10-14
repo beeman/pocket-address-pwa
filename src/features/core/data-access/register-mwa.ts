@@ -8,8 +8,8 @@ import {
 import { APP_IDENTITY } from './app-identity'
 
 /**
- * Registers Mobile Wallet Adapter as a wallet-standard wallet, for Chrome on Android. Inside the
- * Solana Mobile web shell only Seeker Connect is registered, so this is skipped there.
+ * Registers Mobile Wallet Adapter as a wallet-standard wallet, for Chrome on Android, Trusted Web
+ * Activities and the Solana Mobile web shell (the library recognizes the shell by its user agent).
  *
  * Call this once, before React renders.
  */
